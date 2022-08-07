@@ -28,7 +28,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 apt-cache policy docker-ce
 sudo apt update
 sudo apt install docker-ce
-sudo gpasswd -a $whoami docker
+sudo gpasswd -a $USER docker
 
 
 ````
