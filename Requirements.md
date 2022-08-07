@@ -12,23 +12,23 @@ sudo apt install -y git
 ````bash
 #!/bin/bash
 
-wget https://go.dev/dl/go1.18.5.linux-amd64.tar.gz
-tar -xzvf go1.18.5.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.18.5.linux-amd64.tar.gz &&
+tar -xzvf go1.18.5.linux-amd64.tar.gz &&
+echo "GOPATH=$HOME/go/bin" >> .bashrc &&
+echo "PATH=$PATH:$HOME/go/bin >> .bashrc &&
+source ~/.bashrc
 
-export GOPATH=$HOME/go
-
-export PATH=$PATH:$GOPATH/bin
 ````
 3. install docker
 
 ````bash
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-apt-cache policy docker-ce
-sudo apt update
-sudo apt install docker-ce
-sudo gpasswd -a $USER docker
+sudo apt install apt-transport-https ca-certificates curl software-properties-common &&
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add &&
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" &&
+apt-cache policy docker-ce &&
+sudo apt update &&
+sudo apt install docker-ce &&
+sudo gpasswd -a $USER docker 
 
 
 ````
