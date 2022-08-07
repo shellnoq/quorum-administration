@@ -35,6 +35,6 @@ sudo gpasswd -a $USER docker
 
 3. install QuorumMaker
 ````bash
-$ git clone https://github.com/synechron-finlabs/quorum-maker 
+git clone https://github.com/synechron-finlabs/quorum-maker 
 ./setup.sh
 ````
