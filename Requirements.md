@@ -2,8 +2,8 @@
 
 1. install essentials
 ````bash
-sudo apt install -y build-essential manpages-dev
-sudo apt-get install -y unzip libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-dev solc sysvbanner software-properties-common default-jdk maven -y
+sudo apt install -y build-essential manpages-dev &&
+sudo apt-get install -y unzip libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-dev solc sysvbanner software-properties-common default-jdk maven -y &&
 sudo apt install -y git
 ````
 
