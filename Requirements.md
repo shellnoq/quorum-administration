@@ -36,9 +36,10 @@ sudo gpasswd -a $USER docker
 
 ````
 4. Install Geth
+> https://geth.ethereum.org/docs/install-and-build/installing-geth 
 > https://github.com/ethereum/go-ethereum  
 > https://www.quicknode.com/guides/infrastructure/how-to-install-and-run-a-geth-node  
-> 
+
 ````bash
 
 ````
