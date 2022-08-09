@@ -35,9 +35,18 @@ sudo gpasswd -a $USER docker
 
 
 ````
+4. Install Geth
+> https://github.com/ethereum/go-ethereum  
+> https://www.quicknode.com/guides/infrastructure/how-to-install-and-run-a-geth-node  
+> 
+````bash
 
-3. install QuorumMaker
+````
+
+5. install QuorumMaker
 ````bash
 git clone https://github.com/synechron-finlabs/quorum-maker 
 ./setup.sh
 ````
+
+ 
