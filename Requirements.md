@@ -41,6 +41,10 @@ sudo gpasswd -a $USER docker
 > https://www.quicknode.com/guides/infrastructure/how-to-install-and-run-a-geth-node  
 
 ````bash
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+sudo apt-get upgrade geth
 
 ````
 
