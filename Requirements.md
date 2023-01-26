@@ -48,7 +48,7 @@ sudo apt-get upgrade geth
 
 ````
 
-5. install QuorumMaker
+5. Install QuorumMaker
 ````bash
 git clone https://github.com/synechron-finlabs/quorum-maker 
 ./setup.sh
@@ -56,7 +56,7 @@ git clone https://github.com/synechron-finlabs/quorum-maker
 
 6. Monitoring Tools
 
-> Setup Grafana  
+> Install Grafana  
 ````bash
 sudo apt-get install -y apt-transport-https gnupg2 
 sudo apt-get install -y software-properties-common wget
@@ -65,7 +65,7 @@ echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/a
 sudo apt-get update
 sudo apt-get install grafana
 ````
- > Setup Prometheus  
+ > Install Prometheus  
 
 ````bash
 
