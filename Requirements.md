@@ -69,7 +69,55 @@ cd tessera
 ./gradlew build
 ````
 
+___
+### Setup Quorum Network
+Configure the network parameters in each node's 
+nodeX.conf
+ file (replace 
+X
+ with the respective node number):
+Set the 
+privateKeyPath
+ and 
+publicKeyPath
+ to the key files for each node.
+Adjust other parameters like port numbers, IP addresses, consensus mechanism, etc., as needed.
+Generate the Enclave keys for Tessera:
+In each node directory, run the following command:
 
+ java -jar ../tessera/tessera-app-VERSION-jar-with-dependencies.jar -keygen -filename <KEY_FILE>
+
+Replace 
+<KEY_FILE>
+ with a unique key file name for each node.
+Start the nodes:
+In each node directory, start the Quorum and Tessera processes using the configured 
+nodeX.conf
+ file:
+
+ ../quorum/build/bin/geth --datadir ./ --nodiscover --verbosity 5 --networkid 31337 --raft --raftport <RAFT_PORT> --rpc --rpccorsdomain "*" --rpcport <RPC_PORT> --rpcaddr <IP_ADDRESS> --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,tessera --emitcheckpoints --allow-insecure-unlock
+ java -jar ../tessera/tessera-app-VERSION-jar-with-dependencies.jar -configfile <CONFIG_FILE>
+
+Replace 
+<RAFT_PORT>
+, 
+<RPC_PORT>
+, 
+<IP_ADDRESS>
+, and 
+<CONFIG_FILE>
+ with appropriate values based on your configuration.
+Repeat step 8 for each node, adjusting the parameters accordingly.
+___
+
+7. Setup Network configuration for the nodes
+````bash
+
+ cp quorum/build/bin/sample-config/7nodes/* node1/
+ cp quorum/build/bin/sample-config/7nodes/* node2/
+ cp quorum/build/bin/sample-config/7nodes/* node3/
+
+````
 6. Install Nethermind
 what is Nethermind?
 > Nethermind is a client for the Ethereum network. It is written in C# and is compatible with the Ethereum mainnet, Ropsten, Goerli, and Rinkeby testnets. It is also compatible with the Ethereum 2.0 Beacon Chain. Nethermind is a full node, meaning it stores the entire Ethereum blockchain and processes transactions. It is also a mining node, meaning it can mine new blocks and validate transactions. Nethermind is a popular choice for developers who want to run their own Ethereum node, as it is easy to install and use.
