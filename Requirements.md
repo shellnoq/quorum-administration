@@ -1,5 +1,11 @@
 ### Setup Requirements for Ubuntu 20.04 LTS
 
+____
+1. install tools, 
+2. setup nodes
+3. setup monitoring tools
+4.
+____
 1. install essentials
 ````bash
 sudo apt update -y &&
@@ -15,10 +21,11 @@ sudo apt update -y
 ````bash
 #!/bin/bash
 
-wget https://go.dev/dl/go1.18.5.linux-amd64.tar.gz &&
-tar -xzvf go1.18.5.linux-amd64.tar.gz &&
-echo "GOPATH=$HOME/go/bin" >> .bashrc &&
-echo "PATH=$PATH:$HOME/go/bin">> .bashrc &&
+wget https://dl.google.com/go/go1.17.4.linux-amd64.tar.gz
+sudo tar -xvf go1.17.4.linux-amd64.tar.gz
+sudo mv go /usr/local
+export PATH=$PATH:/usr/local/go/bin
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
 ````
@@ -67,6 +74,8 @@ sudo apt-get install grafana
 ````
  > Install Prometheus  
 
-````bash
+````bash 
+sudo apt-get install -y prometheus
+
 
 ````
