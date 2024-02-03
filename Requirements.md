@@ -57,9 +57,29 @@ sudo apt-get upgrade geth
 
 5. Install QuorumMaker
 ````bash
-git clone https://github.com/synechron-finlabs/quorum-maker 
-./setup.sh
+git clone https://github.com/jpmorganchase/quorum.git
+cd quorum
+make all
 ````
+
+6. Install Tessera
+````bash
+git clone https://github.com/jpmorganchase/tessera.git
+cd tessera
+./gradlew build
+````
+
+
+6. Install Nethermind
+what is Nethermind?
+> Nethermind is a client for the Ethereum network. It is written in C# and is compatible with the Ethereum mainnet, Ropsten, Goerli, and Rinkeby testnets. It is also compatible with the Ethereum 2.0 Beacon Chain. Nethermind is a full node, meaning it stores the entire Ethereum blockchain and processes transactions. It is also a mining node, meaning it can mine new blocks and validate transactions. Nethermind is a popular choice for developers who want to run their own Ethereum node, as it is easy to install and use.
+````bash
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install -y nethermind
+````
+
 
 6. Monitoring Tools
 
