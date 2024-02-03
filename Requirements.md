@@ -108,6 +108,9 @@ Replace
 <CONFIG_FILE>
  with appropriate values based on your configuration.
 Repeat step 8 for each node, adjusting the parameters accordingly.
+
+Remember to configure appropriate network connectivity, firewall settings, and security measures when deploying this setup in a production environment.
+
 ___
 
 7. Setup Network configuration for the nodes
